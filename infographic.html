@@ -1,0 +1,368 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Study Strategies That Actually Work</title>
+<link href="https://fonts.googleapis.com/css2?family=Caveat:wght@500;700&family=Source+Sans+3:wght@300;400;600;700&display=swap" rel="stylesheet">
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  body {
+    background: #FAF8F5;
+    color: #2D2A26;
+    font-family: 'Source Sans 3', sans-serif;
+    line-height: 1.65;
+  }
+
+  .page {
+    max-width: 820px;
+    margin: 0 auto;
+    padding: 48px 28px 64px;
+  }
+
+  .top {
+    margin-bottom: 44px;
+  }
+
+  .course-tag {
+    font-size: 0.82rem;
+    color: #8C857A;
+    letter-spacing: 0.5px;
+    margin-bottom: 8px;
+  }
+
+  h1 {
+    font-family: 'Source Sans 3', sans-serif;
+    font-weight: 700;
+    font-size: 2.2rem;
+    line-height: 1.2;
+    color: #1A1816;
+    margin-bottom: 12px;
+  }
+
+  h1 .hand {
+    font-family: 'Caveat', cursive;
+    color: #D4652E;
+    font-size: 2.5rem;
+  }
+
+  .intro {
+    font-size: 1.05rem;
+    color: #5C564D;
+    max-width: 600px;
+  }
+
+  .problem-box {
+    background: #FFF;
+    border: 2px solid #E8E3DB;
+    border-radius: 10px;
+    padding: 24px 28px;
+    margin-bottom: 44px;
+    position: relative;
+  }
+
+  .problem-box::before {
+    content: 'The problem';
+    font-family: 'Caveat', cursive;
+    font-size: 1.15rem;
+    color: #D4652E;
+    position: absolute;
+    top: -14px;
+    left: 20px;
+    background: #FAF8F5;
+    padding: 0 8px;
+  }
+
+  .problem-box p {
+    color: #5C564D;
+    font-size: 0.95rem;
+  }
+
+  .problem-box strong {
+    color: #2D2A26;
+  }
+
+  .strategies-heading {
+    font-weight: 700;
+    font-size: 1.35rem;
+    margin-bottom: 6px;
+    color: #1A1816;
+  }
+
+  .strategies-sub {
+    color: #8C857A;
+    font-size: 0.9rem;
+    margin-bottom: 24px;
+  }
+
+  .card {
+    background: #FFF;
+    border: 1.5px solid #E8E3DB;
+    border-radius: 10px;
+    padding: 22px 24px;
+    margin-bottom: 16px;
+    display: grid;
+    grid-template-columns: 44px 1fr;
+    gap: 16px;
+    align-items: start;
+  }
+
+  .card-num {
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 700;
+    font-size: 0.95rem;
+    color: #FFF;
+    margin-top: 2px;
+  }
+
+  .card:nth-child(1) .card-num { background: #D4652E; }
+  .card:nth-child(2) .card-num { background: #3A7D6E; }
+  .card:nth-child(3) .card-num { background: #4A6FA1; }
+  .card:nth-child(4) .card-num { background: #9B6B3D; }
+  .card:nth-child(5) .card-num { background: #7B6497; }
+
+  .card h3 {
+    font-size: 1.05rem;
+    font-weight: 700;
+    margin-bottom: 4px;
+    color: #1A1816;
+  }
+
+  .card p {
+    font-size: 0.9rem;
+    color: #5C564D;
+    line-height: 1.6;
+  }
+
+  .card .tip {
+    margin-top: 8px;
+    font-family: 'Caveat', cursive;
+    font-size: 1.05rem;
+    color: #D4652E;
+  }
+
+  .compare {
+    margin-top: 44px;
+    margin-bottom: 44px;
+  }
+
+  .compare h2 {
+    font-size: 1.35rem;
+    font-weight: 700;
+    margin-bottom: 6px;
+    color: #1A1816;
+  }
+
+  .compare .note {
+    color: #8C857A;
+    font-size: 0.88rem;
+    margin-bottom: 18px;
+  }
+
+  .tbl-wrap {
+    background: #FFF;
+    border: 1.5px solid #E8E3DB;
+    border-radius: 10px;
+    overflow: hidden;
+  }
+
+  table {
+    width: 100%;
+    border-collapse: collapse;
+  }
+
+  thead th {
+    text-align: left;
+    padding: 12px 18px;
+    font-size: 0.78rem;
+    font-weight: 600;
+    color: #8C857A;
+    text-transform: uppercase;
+    letter-spacing: 0.8px;
+    border-bottom: 1.5px solid #E8E3DB;
+  }
+
+  tbody td {
+    padding: 11px 18px;
+    font-size: 0.9rem;
+    color: #5C564D;
+    border-bottom: 1px solid #F0ECE6;
+  }
+
+  tbody tr:last-child td { border-bottom: none; }
+
+  .works { color: #3A7D6E; font-weight: 600; }
+  .meh { color: #9B6B3D; font-weight: 600; }
+  .nope { color: #C0462B; font-weight: 600; }
+
+  .bottom-box {
+    background: #FFF;
+    border: 2px solid #3A7D6E;
+    border-radius: 10px;
+    padding: 26px 28px;
+    margin-bottom: 36px;
+    position: relative;
+  }
+
+  .bottom-box::before {
+    content: 'TL;DR';
+    font-family: 'Caveat', cursive;
+    font-size: 1.15rem;
+    color: #3A7D6E;
+    position: absolute;
+    top: -14px;
+    left: 20px;
+    background: #FAF8F5;
+    padding: 0 8px;
+  }
+
+  .bottom-box p {
+    color: #5C564D;
+    font-size: 0.95rem;
+  }
+
+  .footer {
+    color: #B0A99E;
+    font-size: 0.78rem;
+    line-height: 1.7;
+    border-top: 1px solid #E8E3DB;
+    padding-top: 20px;
+  }
+
+  @media (max-width: 540px) {
+    h1 { font-size: 1.7rem; }
+    h1 .hand { font-size: 2rem; }
+    .card { grid-template-columns: 1fr; }
+    .card-num { margin-bottom: -6px; }
+  }
+</style>
+</head>
+<body>
+<div class="page">
+
+  <div class="top">
+    <div class="course-tag">ESEPSY 1159 -- Ohio State University</div>
+    <h1>Study Strategies That <span class="hand">Actually Work</span></h1>
+    <p class="intro">Most of us study the same way we always have. But research in cognitive psychology says a lot of those habits are wasting our time. Here are the ones backed by real evidence.</p>
+  </div>
+
+  <div class="problem-box">
+    <p>A huge survey of college students found that <strong>84% rely on re-reading their notes</strong> as their go-to study method. Re-reading feels productive because the material starts to look familiar, but familiarity is not the same as actually knowing it. That gap is why so many students are surprised on exam day.</p>
+  </div>
+
+  <div class="strategies-heading">5 strategies worth switching to</div>
+  <p class="strategies-sub">Ranked roughly by strength of research support.</p>
+
+  <div class="strategies-list">
+
+    <div class="card">
+      <div class="card-num">1</div>
+      <div>
+        <h3>Retrieval Practice</h3>
+        <p>Put your notes away and try to recall the material from memory. Flashcards, practice tests, or just writing down what you remember on a blank sheet all count. The act of pulling information out of your brain is what strengthens it.</p>
+        <div class="tip">^ This one has the most research behind it.</div>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="card-num">2</div>
+      <div>
+        <h3>Spaced Repetition</h3>
+        <p>Study a little bit across several days instead of cramming everything the night before. Review after 1 day, then 3 days, then a week. It feels slower, but the material sticks for way longer because your brain has to work harder each time it retrieves it.</p>
+        <div class="tip">Pair this with #1 for the best results.</div>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="card-num">3</div>
+      <div>
+        <h3>Interleaving</h3>
+        <p>Mix up different problem types or topics in one session. If you're studying math, alternate between different kinds of problems instead of doing 20 of the same type. It's harder in the moment but trains you to recognize which approach to use, not just how to execute it.</p>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="card-num">4</div>
+      <div>
+        <h3>Elaboration</h3>
+        <p>Ask yourself "why does this work?" or "how does this connect to what I already know?" as you study. Generating explanations in your own words forces you to process the material at a deeper level instead of just reading it at face value.</p>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="card-num">5</div>
+      <div>
+        <h3>Dual Coding</h3>
+        <p>Combine words with visuals. Draw a diagram, sketch a timeline, or map out a concept. When you encode something as both a verbal idea and a visual one, you're creating two separate retrieval paths to the same information.</p>
+        <div class="tip">This infographic is an example of dual coding.</div>
+      </div>
+    </div>
+
+  </div>
+
+  <div class="compare">
+    <h2>How common techniques stack up</h2>
+    <p class="note">Based on Dunlosky et al. (2013), a meta-analysis of hundreds of learning studies.</p>
+    <div class="tbl-wrap">
+      <table>
+        <thead>
+          <tr>
+            <th>Technique</th>
+            <th>Rating</th>
+            <th>Why</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Practice testing</td>
+            <td class="works">High</td>
+            <td>Active recall, exposes gaps</td>
+          </tr>
+          <tr>
+            <td>Spaced practice</td>
+            <td class="works">High</td>
+            <td>Fights the forgetting curve</td>
+          </tr>
+          <tr>
+            <td>Elaborative interrogation</td>
+            <td class="meh">Moderate</td>
+            <td>Builds connections, but requires effort</td>
+          </tr>
+          <tr>
+            <td>Summarization</td>
+            <td class="meh">Low-Moderate</td>
+            <td>Only useful if you do it well</td>
+          </tr>
+          <tr>
+            <td>Highlighting</td>
+            <td class="nope">Low</td>
+            <td>Passive; creates false sense of knowing</td>
+          </tr>
+          <tr>
+            <td>Re-reading</td>
+            <td class="nope">Low</td>
+            <td>Minimal effort means minimal retention</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+  <div class="bottom-box">
+    <p>Studying more is not the answer. Studying differently is. Swap re-reading for self-testing, spread your sessions out, and mix topics together. It will feel harder, and that's the point. The difficulty is the learning.</p>
+  </div>
+
+  <div class="footer">
+    ESEPSY 1159 | Spring 2026<br>
+    Sources: Dunlosky, J., et al. (2013). Improving students' learning with effective learning techniques. Psychological Science in the Public Interest, 14(1), 4-58. Roediger, H. L. & Butler, A. C. (2011). The critical role of retrieval practice in long-term retention. Trends in Cognitive Sciences, 15(1), 20-27.
+  </div>
+
+</div>
+</body>
+</html>
